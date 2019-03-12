@@ -1,0 +1,44 @@
+
+Requirements for 64-bit Linux:
+
+  * OptiX version 4.0+
+  * GPU, driver, and CUDA toolkit supported by OptiX, as specified in the OptiX Release Notes
+  * C++ compiler (gcc 4.8.4 has been tested)
+  * CMake (http://www.cmake.org/cmake/resources/software.html).
+
+Instructions for building:
+
+  * Create a build directory other than the local directory.  Using a separate
+    build directory allows multiple builds, differing in flavor, platform, etc.
+
+  * cd to new directory.
+
+  * Run
+     $ ccmake path
+    where path is the path to the local directory.  This will bring up
+    the cmake interface.
+
+  * Press 'c' within ccmake to begin configure process.
+
+  * Set OptiX_INSTALL_DIR to wherever you installed OptiX, e.g., "/usr/local/NVIDIA-OptiX-SDK-<version>", 
+    by moving the cursor over the field, hitting <enter>, changing the value, 
+    and hitting <enter> again.
+
+  * The newly added OptiX Introduction examples add a dependency for the DevIL image library.
+    Under Linux these should be found automatically by the FindDevIL.cmake.
+    If not, you can manually set the IL_INCLUDE_DIR, IL_LIBRARIES, ILU_LIBRARIES, and ILUT_LIBRARIES
+    to the IL include path and libraries IL, ILU and ILUT respectively.
+    
+  * Adjust other options. You may want to change CMAKE_BUILD_TYPE to select a 
+    Debug build rather than the default RELEASE build.
+
+  * Press 'c' again to finish configure.
+
+  * Press 'g' to generate Makefiles and exit.
+
+  * Run
+     $ make
+   to build.
+
+  * Executables should be found in the bin directory.
+

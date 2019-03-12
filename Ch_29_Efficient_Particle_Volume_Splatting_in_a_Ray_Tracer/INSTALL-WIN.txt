@@ -1,0 +1,47 @@
+
+Requirements for 64-bit Windows:
+
+* OptiX version 4.0+
+* GPU, driver, and CUDA toolkit supported by OptiX, as specified in the OptiX Release Notes
+* Microsoft Visual Studio: either VS 2013 for CUDA 7.5, or VS 2015 for CUDA 8
+* CMake (http://www.cmake.org/cmake/resources/software.html).
+
+Instructions for building:
+
+  * Start up cmake-gui from the Start Menu.
+
+  * Select the local directory from optix_advanced_samples as the source file location.
+
+  * Create a build directory that isn't the same as the source directory. 
+    Hint: if you type in the directory instead of using the "Browse Build..." button, 
+    CMake will prompt to create the directory if it doesn't already exist.
+
+  * Press "Configure" button and select the version of Visual Studio you wish to
+    use.  Note that the 64-bit compiles are separate from the 32-bit compiles
+    (e.g. look for "Visual Studio 12 2013 Win64").  Leave all other options on
+    their default.  Press "OK".
+
+  * Set OptiX_INSTALL_DIR to wherever you installed OptiX, e.g., 
+    "C:\ProgramData\NVIDIA Corporation\OptiX SDK <version>\".
+
+  * The newly added OptiX Introduction examples add a dependency for the DevIL image library.
+    Set IL_INCLUDE_DIR, IL_LIBRARIES, ILU_LIBRARIES, and ILUT_LIBRARIES to the path for 
+    DevIL/include, DevIL.lib, ILU.lib and ILUT.lib respectively.
+    
+  * Press "Configure" again, then "Generate".
+
+  * Open the OptiX-Advanced-Samples.sln solution file in the build directory you created.
+
+  * Select "Build Solution" from the IDE.
+
+  * Right click on one of the sample program targets in the solution explorer and
+    select "Set as start up project".
+
+  * Run the sample.  "q" or "Esc" will close the window.
+
+Note that due to the way dependencies are automatically handled for CUDA
+compilation in Visual Studio, if you build again Visual Studio will likely ask
+you to reload your projects.  Please do so.  Subsequent compiles should not
+result in reloading unless you change the files that are included by a CUDA
+file.
+

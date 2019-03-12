@@ -1,0 +1,11 @@
+//pseudocode
+
+result    = 0.0
+weightSum = 0.0
+
+for pixel in neighborhood:
+    weight = localBrdf(pixel.hit) / pixel.hitPdf
+    result += color(pixel.hit) * weight
+    weightSum += weight
+
+result /= weightSum
