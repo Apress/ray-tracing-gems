@@ -3,10 +3,10 @@
 a = 2*u[0] - 1;
 b = 2*u[1] - 1;
 // special case to avoid division by zero, noted by Greg Ward
-if ( (a == 0) && (b == 0) ) {
-    r = 0;
-    phi = 0;
-} else if (a*a > b*b) {
+if ( b == 0 ) {
+    b = 1;
+}
+if (a*a > b*b) {
     r = R*a;
     phi = (M_PI/4)*(b/a);
 } else {
