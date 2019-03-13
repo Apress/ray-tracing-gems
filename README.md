@@ -1,6 +1,6 @@
 # Apress Source Code
 
-This repository accompanies [*Ray Tracing Gems:High-Quality and Real-Time Rendering with DXR and Other APIs*](https://www.apress.com/9781484244265) by Eric Haines and Tomas Akenine-Möller (Apress, 2019).
+This repository accompanies [*Ray Tracing Gems: High-Quality and Real-Time Rendering with DXR and Other APIs*](https://www.apress.com/9781484244265) by Eric Haines and Tomas Akenine-Möller (Apress, 2019).
 
 See [http://raytracinggems.com](http://raytracinggems.com) for further information about the book.
 
