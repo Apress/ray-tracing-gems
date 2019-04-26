@@ -11,7 +11,7 @@ void Push_and_Load(
     // Go down the stack and search a previous instance of the new material
     // (to check for parity and unset its topmost flag).
     for (prev_same = stack_pos; prev_same >= 0; --prev_same)
-        if (material[material_idx] == material[prev_same]) {
+        if (material[material_idx] == material[stack[prev_same].material_idx]) {
             // Note: must have been topmost before.
             stack[prev_same].topmost = false;
             odd_parity = !stack[prev_same].odd_parity;
