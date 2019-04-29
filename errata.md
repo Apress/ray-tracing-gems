@@ -8,6 +8,8 @@ Foreword, page xvii: The passage "photons travel through the is why its introduc
 
 Chapter 3, page 32: The structure "D3D12\_FEATURE\_DATA\_OPTIONS5" should be "D3D12\_FEATURE\_DATA\_D3D12\_OPTIONS5", with a second "D3D12" in there near the end (_v1.2_)
 
+Chapter 11, page 144: Line 15 did not access the "stack" array; latter half should read "material\[stack\[prev_same].material_idx]) {". (_v1.5_)
+
 Chapter 16, page 235: The case "a == 0 && b == 0" is not handled and can result in division by 0; above line 3 add "if (b == 0) b = 1;" (_v1.2_)
 
 Chapter 16, page 241: In Equation 11 change "s+1" to "s+2"; the Phong-like PDF doesn't integrate to 1 over the hemisphere if you include the projection cosine (_v1.2_)
