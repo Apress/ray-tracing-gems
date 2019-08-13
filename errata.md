@@ -18,6 +18,8 @@ Chapter 16, page 242: Line 1 of the code at the top, change "1+s" to "2+s" (_v1.
 
 Chapter 19, page 302: In Equation 1 the first integral is missing "d\omega_i" at the end (_v1.2_)
 
+Chapter 27, page 502: Listing 27-2's caption is something of a copy of 27-4. It should read, "This short closest-hit shader code snippet implements ambient occlusion (AO) lighting with a limited occlusion distance, permitting AO lighting to be used within confined or fully enclosed spaces that would otherwise result in 100% occlusion and full shadow." (_not corrected in PDFs_)
+
 ## Lesser Errors
 
 Chapter 10, page 133: While easy enough to find by searching, the URL for the first reference is http://aggregate.org/MAGIC/ (_v1.2_)
