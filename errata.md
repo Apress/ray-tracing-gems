@@ -10,7 +10,11 @@ This is the printing currently on sale at the publisher's site, Amazon, and else
 
 Chapter 3, page 32: The structure "D3D12\_FEATURE\_DATA\_OPTIONS5" should be "D3D12\_FEATURE\_DATA\_D3D12\_OPTIONS5", with a second "D3D12" in there near the end (_v1.2_)
 
-Chapter 11, page 144: Line 15 did not access the "stack" array; latter half should read "material\[stack\[prev_same].material_idx]) {". (_v1.5_)
+Chapter 3, page 41: "_Shader tables_ are contiguous blocks of 64-bit aligned GPU memory" to "_Shader tables_ are contiguous blocks of 64-byte aligned GPU memory" - change "bit" to "byte". (_not yet corrected in PDFs_)
+
+Chapter 3, page 41: "_Shader identifiers_ are 32-bit chunks" to "_Shader identifiers_ are 32-byte chunks" - change "bit" to "byte". (_not yet corrected in PDFs_)
+
+Chapter 11, page 144: Line 15 did not access the "stack" array; latter half should read "material\[stack\[prev_same].material\_idx]) {". (_v1.5_)
 
 Chapter 16, page 235: The case "a == 0 && b == 0" is not handled and can result in division by 0; above line 3 add "if (b == 0) b = 1;" (_v1.2_)
 
@@ -18,11 +22,13 @@ Chapter 16, page 241: In Equation 11 change "s+1" to "s+2"; the Phong-like PDF d
 
 Chapter 16, page 242: Line 1 of the code at the top, change "1+s" to "2+s" (_v1.2_)
 
-Chapter 19, page 302: In Equation 1 the first integral is missing "d\omega_i" at the end (_v1.2_)
+Chapter 19, page 302: In Equation 1 the first integral is missing (Latex form) "d\omega\_i" at the end (_v1.2_)
 
-Chapter 27, page 502: Listing 27-2's caption is something of a copy of 27-4. It should read, "This short closest-hit shader code snippet implements ambient occlusion (AO) lighting with a limited occlusion distance, permitting AO lighting to be used within confined or fully enclosed spaces that would otherwise result in 100% occlusion and full shadow." (_not corrected in PDFs_)
+Chapter 27, page 502: Listing 27-2's caption is something of a copy of 27-4. It should read, "This short closest-hit shader code snippet implements ambient occlusion (AO) lighting with a limited occlusion distance, permitting AO lighting to be used within confined or fully enclosed spaces that would otherwise result in 100% occlusion and full shadow." (_not yet corrected in PDFs_)
 
 ### Lesser Errors
+
+Chapter 3, page 43: Lines 14 and 27 of the code listing use "(pData + 32)" to avoid book formatting problems. The verbose, but more informative, code "(pData + D3D12\_SHADER\_IDENTIFIER\_SIZE\_IN\_BYTES)" could be used instead. (_not corrected in PDFs_)
 
 Chapter 10, page 133: While easy enough to find by searching, the URL for the first reference is http://aggregate.org/MAGIC/ (_v1.2_)
 
@@ -46,6 +52,6 @@ A few hundred copies of the book were rushed to print in order to be available f
 
 Foreword, page xvii: The passage "photons travel through the is why its introduction" is missing a line between "the" and "is". The whole passage should be "There is no substitute for this capability when the goal is photorealism, where we need to determine the complicated paths along which photons travel through the virtual world. Ray tracing is a fundamental ingredient of realistic rendering, which is why its introduction to the real-time domain was such a significant step for computer graphics." (_v1.2_)
 
-_Thanks to Stephen Hill, Adam Marrs, Daniel Seibert, and Martin Stich for reporting these errors._
+_Thanks to Stephen Hill, Adam Marrs, Daniel Seibert, Martin Stich, and Ebor Folkertsma for reporting these errors._
 
-Page last updated **May 16, 2019**
+Page last updated **October 15, 2019**
