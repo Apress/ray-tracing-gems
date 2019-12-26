@@ -13,7 +13,9 @@ Download or clone the files as a zip using the green button in the upper right, 
 
 Errata for the book [is available](errata.md).
 
-Release v1.0 corresponds to the code in the published book, with two corrections to Chapter 16:
+Release v1.0 corresponds to the code in the published book, with three corrections to Chapter 16:
+
+Page 226: "float SampleLinear( float a, float b ) {" should have a "float u" parameter for the random variable, i.e., "float SampleLinear( float u, float a, float b ) {"
 
 Page 235, file ConcentricSquareMapping.cpp: The case "a == 0 && b == 0" is not handled and can result in division by 0; above line 3 add "if (b == 0) b = 1;"
 

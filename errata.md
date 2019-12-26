@@ -16,6 +16,8 @@ Chapter 3, page 41: "_Shader identifiers_ are 32-bit chunks" to "_Shader identif
 
 Chapter 11, page 144: Line 15 did not access the "stack" array; latter half should read "material\[stack\[prev_same].material\_idx]) {". (_v1.5_)
 
+Chapter 16, page 226: "float SampleLinear( float a, float b ) {" should have a "float u" parameter for the random variable, i.e., "float SampleLinear( float u, float a, float b ) {" (upcoming: _v1.7_)
+
 Chapter 16, page 235: The case "a == 0 && b == 0" is not handled and can result in division by 0; above line 3 add "if (b == 0) b = 1;" (_v1.2_)
 
 Chapter 16, page 241: In Equation 11 change "s+1" to "s+2"; the Phong-like PDF doesn't integrate to 1 over the hemisphere if you include the projection cosine (_v1.2_)
@@ -52,6 +54,6 @@ A few hundred copies of the book were rushed to print in order to be available f
 
 Foreword, page xvii: The passage "photons travel through the is why its introduction" is missing a line between "the" and "is". The whole passage should be "There is no substitute for this capability when the goal is photorealism, where we need to determine the complicated paths along which photons travel through the virtual world. Ray tracing is a fundamental ingredient of realistic rendering, which is why its introduction to the real-time domain was such a significant step for computer graphics." (_v1.2_)
 
-_Thanks to Stephen Hill, Adam Marrs, Daniel Seibert, Martin Stich, and Ebor Folkertsma for reporting these errors._
+_Thanks to Stephen Hill, Adam Marrs, Daniel Seibert, Martin Stich, Ebor Folkertsma, and Mauricio Vives for reporting these errors._
 
 Page last updated **October 20, 2019**
