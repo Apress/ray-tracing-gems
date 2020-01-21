@@ -51,7 +51,8 @@ void shadowRaygen()
   // Launch a ray.
   // Tell the API that we are skipping hit shaders. Free performance!
   TraceRay(rtScene,
-      RAY_FLAG_SKIP_CLOSEST_HIT_SHADER,
+      RAY_FLAG_SKIP_CLOSEST_HIT_SHADER |
+      RAY_FLAG_ACCEPT_FIRST_HIT_AND_END_SEARCH,
       RaytracingInstanceMaskAll, HitType_Shadow, SbtRecordStride,
       MissType_Shadow, ray, shadowPayload);
   

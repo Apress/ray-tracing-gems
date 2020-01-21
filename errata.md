@@ -26,6 +26,10 @@ Chapter 16, page 242: Line 1 of the code at the top, change "1+s" to "2+s" (_v1.
 
 Chapter 19, page 302: In Equation 1 the first integral is missing (Latex form) "d\omega\_i" at the end (_v1.2_)
 
+Chapter 25, page 442: code line 54, add to RAY_FLAG_SKIP_CLOSEST_HIT_SHADER the flag RAY_FLAG_ACCEPT_FIRST_HIT_AND_END_SEARCH, i.e., "RAY_FLAG_SKIP_CLOSEST_HIT_SHADER | RAY_FLAG_ACCEPT_FIRST_HIT_AND_END_SEARCH". (_v1.7_)
+
+Chapter 25, page 442: seventh line from bottom, "we do not require any-hit shader results" to "we do not require hit shader results, and that the first ray-primitive intersection encountered is sufficient to know if we’re in shadow or not." Note the change of "any-hit" to "hit". (_v1.7_)
+
 Chapter 27, page 502: Listing 27-2's caption is something of a copy of 27-4. It should read, "This short closest-hit shader code snippet implements ambient occlusion (AO) lighting with a limited occlusion distance, permitting AO lighting to be used within confined or fully enclosed spaces that would otherwise result in 100% occlusion and full shadow." (_v1.6_)
 
 ### Lesser Errors
@@ -56,4 +60,4 @@ Foreword, page xvii: The passage "photons travel through the is why its introduc
 
 _Thanks to Stephen Hill, Adam Marrs, Daniel Seibert, Martin Stich, Ebor Folkertsma, and Mauricio Vives for reporting these errors._
 
-Page last updated **October 20, 2019**
+Page last updated **January 21, 2020**
