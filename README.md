@@ -1,6 +1,6 @@
 # Apress Source Code
 
-This repository accompanies [*Ray Tracing Gems: High-Quality and Real-Time Rendering with DXR and Other APIs*](https://www.apress.com/9781484244265) by Eric Haines and Tomas Akenine-Möller (Apress, 2019).
+This repository accompanies [*Ray Tracing Gems: High-Quality and Real-Time Rendering with DXR and Other APIs*](https://www.apress.com/9781484244265) by Eric Haines and Tomas Akenine-Mï¿½ller (Apress, 2019).
 
 See [http://raytracinggems.com](http://raytracinggems.com) for further information about the book.
 
@@ -8,6 +8,8 @@ See [http://raytracinggems.com](http://raytracinggems.com) for further informati
 ![Cover image](9781484244265.jpg)
 
 Download or clone the files as a zip using the green button in the upper right, or clone the repository to your machine using Git with https://github.com/Apress/ray-tracing-gems.git
+
+Note that code with a \*.cu or \*.cuh suffix is written in CUDA. The various CUDA functions can be found [in this set of reference pages](https://docs.nvidia.com/cuda/cuda-math-api/modules.html#modules). Code with an \*.hlsl suffix is in the High Level Shading Language, with its [function reference here](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-intrinsic-functions).
 
 ## Releases
 
