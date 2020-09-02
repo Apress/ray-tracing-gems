@@ -429,6 +429,12 @@ int main(const int argc, const char* argv[])
             kernel_params.resolution.x = width;
             kernel_params.resolution.y = height;
             kernel_params.iteration = 0;
+
+            // Allocate texture once
+            glBindTexture(GL_TEXTURE_2D, display_tex);
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_BGRA, GL_UNSIGNED_BYTE, NULL);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         }
         
         // Map GL buffer for access with CUDA.
@@ -456,10 +462,7 @@ int main(const int argc, const char* argv[])
         // Update texture for display.
         glBindBuffer(GL_PIXEL_UNPACK_BUFFER, display_buffer);
         glBindTexture(GL_TEXTURE_2D, display_tex);
-        glTexImage2D(
-            GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_BGRA, GL_UNSIGNED_BYTE, NULL);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexSubImage2D(GL_TEXTURE_2D, 0, 0,0, width, height, GL_BGRA, GL_UNSIGNED_BYTE, NULL);
         glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
         check_success(glGetError() == GL_NO_ERROR);
         
