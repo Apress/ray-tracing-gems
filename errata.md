@@ -14,6 +14,8 @@ Chapter 3, page 41: "_Shader tables_ are contiguous blocks of 64-bit aligned GPU
 
 Chapter 3, page 41: "_Shader identifiers_ are 32-bit chunks" to "_Shader identifiers_ are 32-byte chunks" - change "bit" to "byte". (_v1.6_)
 
+Chapter 3, page 43: "Unqiue" to "Unique" in two places, lines 11 and 19, in the code listing. (_v1.8_)
+
 Chapter 11, page 144: Line 15 did not access the "stack" array; latter half should read "material\[stack\[prev_same].material\_idx]) {". (_v1.5_)
 
 Chapter 16, page 226: "float SampleLinear( float a, float b ) {" should have a "float u" parameter for the random variable, i.e., "float SampleLinear( float u, float a, float b ) {" (upcoming: _v1.7_)
@@ -60,4 +62,4 @@ Foreword, page xvii: The passage "photons travel through the is why its introduc
 
 _Thanks to Stephen Hill, Adam Marrs, Daniel Seibert, Martin Stich, Ebor Folkertsma, and Mauricio Vives for reporting these errors._
 
-Page last updated **January 21, 2020**
+Page last updated **April 12, 2021**
