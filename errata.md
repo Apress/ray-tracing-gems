@@ -18,6 +18,10 @@ Chapter 3, page 43: "Unqiue" to "Unique" in two places, lines 11 and 19, in the 
 
 Chapter 11, page 144: Line 15 did not access the "stack" array; latter half should read "material\[stack\[prev_same].material\_idx]) {". (_v1.5_)
 
+Chapter 15, page 213: Lines 7 and 8 in the code listing should be (_v1.9_):
+7   return sum_sq / (n - 1) -
+8          sum * sum / ((n - 1) * n); 
+
 Chapter 16, page 226: "float SampleLinear( float a, float b ) {" should have a "float u" parameter for the random variable, i.e., "float SampleLinear( float u, float a, float b ) {" (upcoming: _v1.7_)
 
 Chapter 16, page 235: The case "a == 0 && b == 0" is not handled and can result in division by 0; above line 3 add "if (b == 0) b = 1;" (_v1.2_)
@@ -60,6 +64,6 @@ A few hundred copies of the book were rushed to print in order to be available f
 
 Foreword, page xvii: The passage "photons travel through the is why its introduction" is missing a line between "the" and "is". The whole passage should be "There is no substitute for this capability when the goal is photorealism, where we need to determine the complicated paths along which photons travel through the virtual world. Ray tracing is a fundamental ingredient of realistic rendering, which is why its introduction to the real-time domain was such a significant step for computer graphics." (_v1.2_)
 
-_Thanks to Stephen Hill, Adam Marrs, Daniel Seibert, Martin Stich, Ebor Folkertsma, and Mauricio Vives for reporting these errors._
+_Thanks to Stephen Hill, Adam Marrs, Daniel Seibert, Martin Stich, Ebor Folkertsma, Mauricio Vives, and Filip Strugar for reporting these errors._
 
-Page last updated **April 12, 2021**
+Page last updated **May 6, 2021**

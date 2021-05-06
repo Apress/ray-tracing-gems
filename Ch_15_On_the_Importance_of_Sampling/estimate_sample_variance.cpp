@@ -4,6 +4,6 @@ float estimate_sample_variance(float samples[], int n) {
      sum += samples[i];
      sum_sq += samples[i] * samples[i];
    }
-   return sum_sq / (n * (n - 1))) -
-          sum * sum / ((n - 1) * n * n);
+   return sum_sq / (n - 1) -
+          sum * sum / ((n - 1) * n); 
 }
